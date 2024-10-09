@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns:ShipInfo="http://www.tibco.com/schemas/1.Schemas/Resources/Schemas/Models/ShipInfo"
+	 xmlns:Address="http://www.tibco.com/schemas/0.ProjectZero/Resources/Schemas/Models/Address"
+	 targetNamespace="http://www.tibco.com/schemas/1.Schemas/Resources/Schemas/Models/ShipInfo"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.tibco.com/schemas/0.ProjectZero/Resources/Schemas/Models/Address" schemaLocation="Address.xsd"/>
+	<xs:element name="ShipInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ShipVia" type="xs:int"/>
+				<xs:element name="Freight" type="xs:double"/>
+				<xs:element name="ShipName" type="xs:string"/>
+				<xs:element ref="Address:Address"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

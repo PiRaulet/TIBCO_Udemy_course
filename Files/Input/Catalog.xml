@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catalog xmlns="http://www.tibco.com/schemas/2.ParseRenderXML/Resources/Schemas/Models/Catalog">
+    <Course xmlns="http://www.tibco.com/schemas/2.ParseRenderXML/Resources/Schemas/Models/Course">
+        <id>1</id>
+        <author>Pierre Raulet</author>
+        <title>Se faire plaisir</title>
+        <genre>Developpement personnel</genre>
+        <price>19.99</price>
+        <publishDate>2024-10-08</publishDate>
+    </Course>
+    <Course  xmlns="http://www.tibco.com/schemas/2.ParseRenderXML/Resources/Schemas/Models/Course">
+        <id>2</id>
+        <author>Christelle Raulet</author>
+        <title>Osez tout !!</title>
+        <genre>Developpement personnel</genre>
+        <price>15.99</price>
+        <publishDate>2024-03-17</publishDate>
+    </Course>
+</Catalog>
+    
