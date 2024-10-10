@@ -52,8 +52,8 @@
     <pd:activity name="Read File">
         <pd:type>com.tibco.plugin.file.FileReadActivity</pd:type>
         <pd:resourceType>ae.activities.FileReadActivity</pd:resourceType>
-        <pd:x>311</pd:x>
-        <pd:y>79</pd:y>
+        <pd:x>312</pd:x>
+        <pd:y>78</pd:y>
         <config>
             <encoding>text</encoding>
         </config>
@@ -68,7 +68,7 @@
     <pd:activity name="Parse XML">
         <pd:type>com.tibco.plugin.xml.XMLParseActivity</pd:type>
         <pd:resourceType>ae.activities.XMLParseActivity</pd:resourceType>
-        <pd:x>432</pd:x>
+        <pd:x>431</pd:x>
         <pd:y>79</pd:y>
         <config>
             <inputStyle>text</inputStyle>
@@ -187,7 +187,7 @@
         <pd:activity name="Write File">
             <pd:type>com.tibco.plugin.file.FileWriteActivity</pd:type>
             <pd:resourceType>ae.activities.FileWriteActivity</pd:resourceType>
-            <pd:x>886</pd:x>
+            <pd:x>885</pd:x>
             <pd:y>77</pd:y>
             <config>
                 <encoding>text</encoding>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns5="http://www.tibco.com/schemas/2.ParseRenderXML/Resources/Schemas/Services/ParseRenderOrdersXMLRequest" xmlns:pfx="http://www.tibco.com/schemas/0.ProjectZero/Resources/Schemas/Commons/Header" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx2="http://www.tibco.com/schemas/0.ProjectZero/Resources/Schemas/Models/Context" xmlns:ns="http://www.tibco.com/schemas/0.ProjectZero/Resources/Schemas/SharedProcesses/WriteToFileRequest" xmlns:ns2="http://www.tibco.com/schemas/2.ParseRenderXML/Resources/Schemas/Services/ParseRenderCatalogXMLRequest" xmlns:ns4="http://www.tibco.com/schemas/2.ParseRenderXML/Resources/Schemas/Models/Context" xmlns:ns3="http://www.tibco.com/schemas/2.ParseRenderXML/Resources/Schemas/Commons/Header">
+    <pd:name>Tests/TestParseRenderOrderXML.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startX>151</pd:startX>
+    <pd:startY>110</pd:startY>
+    <pd:returnBindings/>
+    <pd:endName>End</pd:endName>
+    <pd:endX>460</pd:endX>
+    <pd:endY>112</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1728311953765</pd:targetNamespace>
+    <pd:activity name="ParseRenderOrdersXML">
+        <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+        <pd:resourceType>ae.process.subprocess</pd:resourceType>
+        <pd:x>303</pd:x>
+        <pd:y>109</pd:y>
+        <config>
+            <processName>/Processes/SharedProcesses/ParseRenderOrdersXML.process</processName>
+        </config>
+        <pd:inputBindings>
+            <ns5:ParseRenderOrdersXMLRequest>
+                <ns3:Header>
+                    <ns4:Context>
+                        <ns4:correlationId>
+                            <xsl:value-of select="12345"/>
+                        </ns4:correlationId>
+                    </ns4:Context>
+                    <ns3:timestamp>
+                        <xsl:value-of select="current-dateTime()"/>
+                    </ns3:timestamp>
+                </ns3:Header>
+                <ns5:Body>
+                    <ns5:sourcePath>
+                        <xsl:value-of select="&quot;C:\Formation_Tibco\TIBCO_Udemy_Course\Files\Input\&quot;"/>
+                    </ns5:sourcePath>
+                    <ns5:sourceFileName>
+                        <xsl:value-of select="&quot;Orders.xml&quot;"/>
+                    </ns5:sourceFileName>
+                </ns5:Body>
+            </ns5:ParseRenderOrdersXMLRequest>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>ParseRenderOrdersXML</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>ParseRenderOrdersXML</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>
